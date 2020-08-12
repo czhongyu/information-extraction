@@ -1,53 +1,50 @@
+# source
+source_path = "../data"
+train_source = "train_data.json"
+dev_source = "dev_data.json"
+test_source = "dev_data_with_predicate.json"
 
-class Config:
-    debug = False
+# data
+data_path = "./data"
+train_name = "train_data.pkl"
+dev_name = "dev_data.pkl"
+test_name = "dev_data_with_predicate.pkl"
 
-    # path
-    source_path = "../data"
-    data_path = "./data"
-    save_path = "./models"
+# vocabs
+word_vocab_name = "word_vocab.pkl"
+char_vocab_name = "char_vocab.pkl"
+pos_vocab_name = "pos_vocab.pkl"
+tag_vocab_name = "tag_vocab.pkl"
+weight_name = "weight.pkl"
 
-    train_source = "train_data.json"
-    train_name = "train_data.pkl"
-    dev_source = "dev_data.json"
-    dev_name = "dev_data.pkl"
-    test_source = "test1_data_postag_with_predicate.json"
-    test_name = "test1_data_postag_with_predicate.pkl"
+# vocab
+unk_str = '<unk>'
+pad_str = '<pad>'
 
-    word_vocab_name = "word_vocab.pkl"
-    char_vocab_name = "char_vocab.pkl"
-    pos_vocab_name = "pos_vocab.pkl"
-    #spo_vocab_name = "spo_vocab.pkl"
-    tag_vocab_name = "tag_vocab.pkl"
+# args
+seed = 11
+device = 2
+seq_len = 320
+encoding_type = 'bieso'
+batch_size = 64
 
-    device = [5]
-    # device = 'cpu'
+# char_embed_dim = 64
+word_embed_dim = 64
+# pos_embed_dim = 64
+# hidden_dim = 128
+# #dropout = 0.5
 
-    char_embed_dim = 64
-    word_embed_dim = 64
-    pos_embed_dim = 64
-    sentence_length = 320
-    hidden_dim = 128
-    #dropout = 0.5
-    encoding_type = 'bieso'
-    batch_size = 64
-    epoch = 64
-    lr = 1e-3
-    weight_decay = 0
-    patience = 10
+# 
+# epoch = 64
+# lr = 1e-3
+# weight_decay = 0
+# patience = 10
 
-    print_every = 1000
-    validate_every = 0
 
-    task_names = ['bilstm_crf', 'trans_crf']
-    
-    num_layers = 4
-    inner_size = 256
-    key_size = 64
-    value_size = 64
-    num_head = 4
-    dropout = 0.1
-
-    ensemble_models = ['best_AdvSeqLabel_f_2019-06-28-21-16-23', 
-                        'best_TransformerSeqLabel_f_2019-06-29-11-26-33']
+# num_layers = 4
+# inner_size = 256
+# key_size = 64
+# value_size = 64
+# num_head = 4
+# dropout = 0.1
 

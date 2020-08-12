@@ -1,12 +1,6 @@
-__all__ = [
-    "ConditionalRandomField",
-    "allowed_transitions"
-]
-
 import torch
 from torch import nn
-
-#from ..utils import initial_parameter
+from fastNLP.modules.utils import initial_parameter
 
 
 def allowed_transitions(id2target, encoding_type='bio', include_start_end=True):
@@ -333,3 +327,4 @@ class ConditionalRandomField(nn.Module):
         else:
             paths = ans
         return paths, ans_score
+
