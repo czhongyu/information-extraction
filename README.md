@@ -1,4 +1,4 @@
-# information-extraction-pytorch
+# information-extraction
 
 2019 Language and Intelligence Challenge: Information Extraction (PyTorch implementation)
 
